@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: vrc始めました
+  body: パブリックわちゃわちゃ... 楽しいです♪
+
+two:
+  id: 2
+  title: 容態急変【FULL】
+  body: nocontent

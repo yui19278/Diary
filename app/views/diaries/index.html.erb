@@ -1,0 +1,46 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Diaries" %>
+
+<h1>日記一覧</h1>
+
+<%# ここからコメントアウト %>
+<% if false %>
+<div id="diaries">
+  <% @diaries.each do |diary| %>
+    <%= render diary %>
+    <p>
+      <%= link_to "Show this diary", diary %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New diary", new_diary_path %>
+<% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>登録日時</th>
+        <th>更新日時</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @diaries.each do |diary| %>
+        <tr>
+          <td><%= diary.id %></td>
+          <td><%= link_to diary.title, diary %></td>
+          <td><%= diary.created_at %></td>
+          <td><%= diary.updated_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to "新しく日記を書く", new_diary_path %>
+

@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<% if false %>
+<%= render @diary %>
+<% end %>
+
+<%# 下と意味は同じです %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @diary.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @diary.body %>
+</p> 
+
+<p>
+  <strong>作成日:</strong>
+  <%= @diary.created_at %>
+</p>
+<p>
+  <strong>更新日:</strong>
+  <%= @diary.updated_at %>
+</p>
+
+<div>
+  <%= link_to "日記を編集する", edit_diary_path(@diary) %> |
+  <%= link_to "日記に戻る", diaries_path %>
+
+  <%= button_to "日記を消す", @diary, method: :delete, form:{ data: { turbo_confirm: "本当に消しますか？"}}%>
+</div>
