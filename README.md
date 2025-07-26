@@ -1,0 +1,2 @@
+# Diary
+prac_ruby
